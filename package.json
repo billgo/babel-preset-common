@@ -2,7 +2,7 @@
   "name": "babel-preset-habitual",
   "npmName": "BabelPresetHabitual",
   "description": "babel-preset-habitual",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "lib/index.js",
   "files": [
     "lib",
@@ -57,7 +57,7 @@
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.1.2",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.18"
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.19"
   },
   "devDependencies": {
     "rimraf": "^2.6.2"
