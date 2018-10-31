@@ -1,8 +1,8 @@
 {
-  "name": "babel-preset-habitual",
-  "npmName": "BabelPresetHabitual",
-  "description": "babel-preset-habitual",
-  "version": "0.0.10",
+  "name": "babel-preset-common",
+  "npmName": "BabelPresetCommon",
+  "description": "babel-preset-common",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "files": [
     "lib",
@@ -13,13 +13,13 @@
   ],
   "license": "MIT",
   "author": "Billgo",
-  "homepage": "https://yiqilai.tech",
+  "homepage": "https://github.com/billgo/babel-preset-common",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/billgo/babel-preset-habitual.git"
+    "url": "git+https://github.com/billgo/babel-preset-common.git"
   },
   "bugs": {
-    "url": "https://github.com/billgo/babel-preset-habitual/issues"
+    "url": "https://github.com/billgo/babel-preset-common/issues"
   },
   "scripts": {
     "start": "npm run build",

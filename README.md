@@ -1,5 +1,5 @@
-# babel-preset-habitual
-Another babel preset based on [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)
+# babel-preset-common
+Babel preset based on [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)
 
 ## Options
 
