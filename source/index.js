@@ -3,7 +3,7 @@ module.exports = function(context, opts = {}) {
   const {
     useBuiltIns = false,
     loose = false,
-    modules = "commonjs",
+    modules = false,
     targets = { browsers: ['last 2 versions'] },
     env = {},
   } = opts;
