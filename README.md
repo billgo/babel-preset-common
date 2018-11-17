@@ -1,16 +1,14 @@
 # babel-preset-common
 Babel preset based on [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)
 
-## how to use
+## How to use
 
 ```
   "babel": {
     "presets": [
-      "common", {
-        "targets": {
-          "modules": false
-        }
-      }
+      ["common", {
+        "modules": "commonjs"
+      }]
     ],
     "comments": false,
     "minified": true
