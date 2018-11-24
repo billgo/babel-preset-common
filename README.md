@@ -6,27 +6,42 @@ Babel preset based on [@babel/preset-env](https://www.npmjs.com/package/@babel/p
 ```
   "babel": {
     "presets": [
-      ["common", {
-        "modules": "commonjs"
-      }]
+      [
+        "common",
+        {
+          "modules": "commonjs"
+        }
+      ]
     ],
     "comments": false,
     "minified": true
-  },
+  }
 ```
 
 ```
-["common", {
-  "targets": {
-    "browsers": ['last 2 versions']
+  "babel": {
+    "presets": [
+      [
+        "common",
+        {
+          "targets": ['last 2 versions']
+        }
+      ]
+    ]
   }
-}]
 ```
 
 ```
-["common", {
-  "targets": {
-    "node": "6"
+  "babel": {
+    "presets": [
+      [
+        "common",
+        {
+          "targets": {
+            "node": "6"
+          }
+        }
+      ]
+    ]
   }
-}]
 ```
