@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "npm run build",
-    "build": "rimraf lib && mkdir lib && babel source --out-dir lib"
+    "build": "rimraf lib && mkdir lib && babel src --out-dir lib"
   },
   "babel": {
     "presets": [
