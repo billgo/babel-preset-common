@@ -2,17 +2,9 @@
   "name": "babel-preset-common",
   "npmName": "BabelPresetCommon",
   "description": "babel-preset-common",
-  "version": "0.0.5",
-  "main": "lib/index.js",
-  "files": [
-    "lib",
-    "umd"
-  ],
-  "keywords": [
-    "babel"
-  ],
-  "license": "MIT",
+  "version": "0.0.17",
   "author": "Billgo",
+  "license": "MIT",
   "homepage": "https://github.com/billgo/babel-preset-common",
   "repository": {
     "type": "git",
@@ -21,43 +13,54 @@
   "bugs": {
     "url": "https://github.com/billgo/babel-preset-common/issues"
   },
+  "keywords": [
+    "babel"
+  ],
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "umd"
+  ],
   "scripts": {
-    "start": "npm run build",
+    "prepare": "npm run build",
     "build": "rimraf lib && mkdir lib && babel source --out-dir lib"
   },
   "babel": {
     "presets": [
       "@babel/preset-env"
     ],
-    "minified": true,
+    "minified": false,
     "comments": false
   },
   "dependencies": {
     "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
-    "@babel/plugin-proposal-class-properties": "^7.2.3",
-    "@babel/plugin-proposal-decorators": "^7.2.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
     "@babel/plugin-proposal-do-expressions": "^7.2.0",
     "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.2.0",
     "@babel/plugin-proposal-function-bind": "^7.2.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.2.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
     "@babel/plugin-proposal-optional-catch-binding": "^7.2.0",
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
-    "@babel/plugin-proposal-pipeline-operator": "^7.2.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.3.2",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-modules-commonjs": "^7.2.0",
     "@babel/plugin-transform-react-constant-elements": "^7.2.0",
     "@babel/plugin-transform-react-inline-elements": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.3.4",
     "@babel/polyfill": "^7.2.5",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-env": "^7.3.4",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "@babel/runtime": "^7.2.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.21"
+    "@babel/runtime": "^7.3.4",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-macros": "^2.5.0",
+    "babel-plugin-react-require": "^3.1.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
   },
   "devDependencies": {
     "rimraf": "^2.6.3"

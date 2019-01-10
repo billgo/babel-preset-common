@@ -2,9 +2,12 @@ module.exports = function(context, opts = {}) {
   const nodeEnv = process.env.NODE_ENV;
   const {
     useBuiltIns = false,
+    modules = 'auto',
     loose = false,
-    modules = false,
-    targets = { browsers: ['last 2 versions'] },
+    targets = { 
+      browsers: ['last 2 versions'],
+      node: '10'
+    },
     env = {},
   } = opts;
   const transformRuntime = 'transformRuntime' in opts ? opts.transformRuntime : {};
@@ -20,6 +23,7 @@ module.exports = function(context, opts = {}) {
   ];
 
   const plugins = [
+    require.resolve('babel-plugin-react-require'),
     require.resolve('@babel/plugin-syntax-dynamic-import'),
     [
       require.resolve('@babel/plugin-proposal-object-rest-spread'),
@@ -49,7 +53,21 @@ module.exports = function(context, opts = {}) {
     ],
     require.resolve('@babel/plugin-proposal-do-expressions'),
     require.resolve('@babel/plugin-proposal-function-bind'),
+    require.resolve('babel-plugin-macros'),
   ];
+
+  if (modules === 'commonjs') {
+    plugins.push([
+      [
+        require.resolve('@babel/plugin-transform-modules-commonjs'),
+        { 
+          loose:true, 
+          noInterop: true 
+        },
+      ],
+      require.resolve('babel-plugin-add-module-exports'),
+    ]);
+  }
 
   if (nodeEnv !== 'test' && transformRuntime) {
     plugins.push([
@@ -57,6 +75,7 @@ module.exports = function(context, opts = {}) {
       transformRuntime,
     ]);
   }
+
   if (nodeEnv === 'production') {
     plugins.push(
       require.resolve('babel-plugin-transform-react-remove-prop-types'),

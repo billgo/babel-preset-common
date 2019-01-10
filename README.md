@@ -9,7 +9,7 @@ Babel preset based on [@babel/preset-env](https://www.npmjs.com/package/@babel/p
         {
           "modules": "commonjs",
           "targets": {
-            "node": "6"
+            "node": "6.16"
           }
         }
       ]
