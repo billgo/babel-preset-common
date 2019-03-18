@@ -53,19 +53,17 @@ module.exports = function(context, opts = {}) {
     ],
     require.resolve('@babel/plugin-proposal-do-expressions'),
     require.resolve('@babel/plugin-proposal-function-bind'),
+    require.resolve('babel-plugin-add-module-exports'),
     require.resolve('babel-plugin-macros'),
   ];
 
   if (modules === 'commonjs') {
     plugins.push([
-      [
-        require.resolve('@babel/plugin-transform-modules-commonjs'),
-        { 
-          loose:true, 
-          noInterop: true 
-        },
-      ],
-      require.resolve('babel-plugin-add-module-exports'),
+      require.resolve('@babel/plugin-transform-modules-commonjs'),
+      { 
+        loose:true, 
+        noInterop: true 
+      },
     ]);
   }
 

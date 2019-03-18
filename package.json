@@ -2,7 +2,7 @@
   "name": "babel-preset-common",
   "npmName": "BabelPresetCommon",
   "description": "babel-preset-common",
-  "version": "0.0.17",
+  "version": "0.1.0",
   "author": "Billgo",
   "license": "MIT",
   "homepage": "https://github.com/billgo/babel-preset-common",
