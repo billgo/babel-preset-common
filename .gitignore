@@ -6,6 +6,7 @@ npm-debug.log
 yarn-error.log
 stats.json
 package-lock.json
+yarn.lock
 
 # Runtime data
 pids
@@ -29,10 +30,7 @@ bin/Release
 
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-umd/**
 node_modules
-**/node_modules
-packages/*/umd
 
 #Webstorm metadata
 .idea

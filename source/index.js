@@ -6,7 +6,7 @@ module.exports = function(context, opts = {}) {
     loose = false,
     targets = { 
       browsers: ['last 2 versions'],
-      node: '10'
+      node: 'current'
     },
     env = {},
   } = opts;

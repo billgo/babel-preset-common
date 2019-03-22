@@ -1,5 +1,8 @@
 # babel-preset-common
+
 Babel preset based on [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)
+
+## for Node.js project
 
 ```
   "babel": {
@@ -7,12 +10,21 @@ Babel preset based on [@babel/preset-env](https://www.npmjs.com/package/@babel/p
       [
         "common",
         {
-          "modules": "commonjs",
-          "targets": {
-            "node": "6.16"
-          }
+          "modules": "commonjs"
         }
       ]
+    ],
+    "comments": false,
+    "minified": true
+  }
+```
+
+## for React.js project
+
+```
+  "babel": {
+    "presets": [
+      "common"
     ],
     "comments": false,
     "minified": true
