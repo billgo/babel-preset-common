@@ -1,10 +1,10 @@
 module.exports = function(context, opts = {}) {
   const nodeEnv = process.env.NODE_ENV;
   const {
-    useBuiltIns = false,
-    modules = 'auto',
     loose = false,
-    targets = { 
+    useBuiltIns = 'usage',
+    modules = 'auto',
+    targets = {
       browsers: ['last 2 versions'],
       node: 'current'
     },
@@ -27,7 +27,7 @@ module.exports = function(context, opts = {}) {
     require.resolve('@babel/plugin-syntax-dynamic-import'),
     [
       require.resolve('@babel/plugin-proposal-object-rest-spread'),
-      { loose, useBuiltIns },
+      { loose: true, useBuiltIns: true },
     ],
     require.resolve('@babel/plugin-proposal-optional-catch-binding'),
     require.resolve('@babel/plugin-proposal-async-generator-functions'),
@@ -53,6 +53,7 @@ module.exports = function(context, opts = {}) {
     ],
     require.resolve('@babel/plugin-proposal-do-expressions'),
     require.resolve('@babel/plugin-proposal-function-bind'),
+    require.resolve('babel-plugin-inline-json-import'),
     require.resolve('babel-plugin-add-module-exports'),
     require.resolve('babel-plugin-macros'),
   ];
@@ -60,9 +61,9 @@ module.exports = function(context, opts = {}) {
   if (modules === 'commonjs') {
     plugins.push([
       require.resolve('@babel/plugin-transform-modules-commonjs'),
-      { 
-        loose:true, 
-        noInterop: true 
+      {
+        loose:true,
+        noInterop: true
       },
     ]);
   }
