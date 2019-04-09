@@ -2,7 +2,7 @@ module.exports = function(context, opts = {}) {
   const nodeEnv = process.env.NODE_ENV;
   const {
     loose = false,
-    useBuiltIns = 'usage',
+    useBuiltIns = false,
     modules = 'auto',
     targets = {
       browsers: ['last 2 versions'],
@@ -53,20 +53,10 @@ module.exports = function(context, opts = {}) {
     ],
     require.resolve('@babel/plugin-proposal-do-expressions'),
     require.resolve('@babel/plugin-proposal-function-bind'),
-    require.resolve('babel-plugin-inline-json-import'),
+    require.resolve('@babel/plugin-external-helpers'),
     require.resolve('babel-plugin-add-module-exports'),
     require.resolve('babel-plugin-macros'),
   ];
-
-  if (modules === 'commonjs') {
-    plugins.push([
-      require.resolve('@babel/plugin-transform-modules-commonjs'),
-      {
-        loose:true,
-        noInterop: true
-      },
-    ]);
-  }
 
   if (nodeEnv !== 'test' && transformRuntime) {
     plugins.push([
@@ -86,8 +76,9 @@ module.exports = function(context, opts = {}) {
       [
         require.resolve('@babel/preset-env'),
         {
-          targets,
           loose,
+          useBuiltIns,
+          targets,
           modules,
           exclude,
           ...env,
