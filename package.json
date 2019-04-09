@@ -1,40 +1,26 @@
 {
   "name": "babel-preset-common",
   "npmName": "BabelPresetCommon",
-  "description": "babel-preset-common",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Billgo",
   "license": "MIT",
+  "description": "babel-preset-common",
   "homepage": "https://github.com/billgo/babel-preset-common",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/billgo/babel-preset-common.git"
-  },
-  "bugs": {
-    "url": "https://github.com/billgo/babel-preset-common/issues"
-  },
-  "keywords": [
-    "babel"
-  ],
   "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "files": [
     "lib"
   ],
   "scripts": {
     "prepare": "npm run build",
-    "build": "rimraf lib && mkdir lib && babel source --out-dir lib"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env"
-    ],
-    "minified": true,
-    "comments": false
+    "build": "rimraf lib && mkdir lib && babel source --out-dir lib",
+    "lint": "prettier-eslint --write source/**/*.{js,jsx}"
   },
   "dependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
-    "@babel/plugin-external-helpers": "^7.2.0",
     "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/plugin-proposal-decorators": "^7.4.0",
@@ -58,14 +44,69 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.4.3",
     "babel-plugin-add-module-exports": "^1.0.0",
-    "babel-plugin-macros": "^2.5.1",
     "babel-plugin-react-require": "^3.1.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1",
     "rimraf": "^2.6.3"
   },
-  "directories": {
-    "lib": "lib"
-  }
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "minified": true,
+    "comments": false
+  },
+  "eslintConfig": {
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "plugins": [
+      "babel",
+      "prettier"
+    ],
+    "extends": [
+      "plugin:prettier/recommended",
+      "prettier/flowtype",
+      "prettier/react"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "es6": true
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/*",
+    "lib/*",
+    "docs/*",
+    "dist/*",
+    "build/*",
+    "coverage/*",
+    "fixtures/*",
+    "umd/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billgo/babel-preset-common.git"
+  },
+  "bugs": "https://github.com/billgo/babel-preset-common/issues"
 }
