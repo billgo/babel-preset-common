@@ -42,7 +42,6 @@ module.exports = function(context, opts = {}) {
     ],
     require.resolve('@babel/plugin-proposal-do-expressions'),
     require.resolve('@babel/plugin-proposal-function-bind'),
-    require.resolve('babel-plugin-add-module-exports'),
   ];
 
   if (nodeEnv !== 'test' && transformRuntime) {
