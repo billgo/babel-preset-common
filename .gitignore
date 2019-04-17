@@ -10,8 +10,8 @@ lerna-debug.log*
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Webpack reports
-docs/report.html
-docs/stats.json
+stats/index.html
+stats/stats.json
 
 # Runtime data
 pids
