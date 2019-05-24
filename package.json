@@ -4,7 +4,7 @@
   "version": "0.2.0",
   "author": "Billgo",
   "license": "MIT",
-  "description": "babel-preset-common",
+  "description": "A preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms are needed by your target environment(s).",
   "homepage": "https://github.com/billgo/babel-preset-common",
   "main": "lib/index.js",
   "directories": {
@@ -14,9 +14,9 @@
     "lib"
   ],
   "scripts": {
-    "prepare": "npm run lint && npm run build",
-    "build": "rimraf lib && mkdir lib && babel source --out-dir lib",
-    "lint": "prettier-eslint --write source/**/*.{js,jsx}"
+    "prepare": "npm run lint && npm run compile",
+    "compile": "rimraf lib && mkdir lib && babel src --out-dir lib",
+    "lint": "prettier-eslint --write src/**/*.{js,jsx}"
   },
   "dependencies": {
     "@babel/cli": "^7.4.4",

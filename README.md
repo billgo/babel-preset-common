@@ -1,27 +1,16 @@
 # babel-preset-common
 
-Babel preset based on [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)
+A preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms are needed by your target environment(s). Babel preset based on [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)
 
-## for Node.js project
-
-```
-  "babel": {
-    "presets": [
-      [
-        "common",
-        {
-          "modules": "commonjs"
-        }
-      ]
-    ],
-    "comments": false,
-    "minified": true
-  }
-```
-
-## for React.js project
+## Install
 
 ```
+yarn add -D babel-preset-common
+```
+
+## Usage
+
+```js
   "babel": {
     "presets": [
       "common"
@@ -30,3 +19,7 @@ Babel preset based on [@babel/preset-env](https://www.npmjs.com/package/@babel/p
     "minified": true
   }
 ```
+
+## License
+
+MIT © Billgo
