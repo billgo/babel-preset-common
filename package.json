@@ -1,7 +1,7 @@
 {
   "name": "babel-preset-common",
   "npmName": "BabelPresetCommon",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Billgo",
   "license": "MIT",
   "description": "A preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms are needed by your target environment(s).",
@@ -43,6 +43,7 @@
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.4.5",
+    "babel-plugin-add-module-exports": "^1.0.2",
     "babel-plugin-react-require": "^3.1.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
   },
@@ -53,7 +54,7 @@
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.17.1",
+    "prettier": "^1.18.2",
     "prettier-eslint": "^8.8.2",
     "prettier-eslint-cli": "^4.7.1",
     "rimraf": "^2.6.3"

@@ -24,6 +24,7 @@ module.exports = function(context, opts = {}) {
 
   const plugins = [
     require.resolve('babel-plugin-react-require'),
+    require.resolve('babel-plugin-add-module-exports'),
     require.resolve('@babel/plugin-syntax-dynamic-import'),
     [require.resolve('@babel/plugin-proposal-object-rest-spread'), { loose: true, useBuiltIns: true }],
     require.resolve('@babel/plugin-proposal-optional-catch-binding'),
