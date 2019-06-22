@@ -10,7 +10,7 @@ yarn add -D babel-preset-common
 
 ## Usage
 
-```js
+```json
   "babel": {
     "presets": [
       "common"
