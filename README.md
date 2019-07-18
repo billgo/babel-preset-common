@@ -1,4 +1,5 @@
 # babel-preset-common
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 A preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms are needed by your target environment(s). Babel preset based on [@babel/preset-env](https://www.npmjs.com/package/@babel/preset-env)
@@ -21,10 +22,6 @@ yarn add -D babel-preset-common
   }
 ```
 
-## License
-
-MIT © Billgo
-
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -40,3 +37,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## License
+
+MIT © Billgo
