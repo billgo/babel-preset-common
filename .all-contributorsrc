@@ -1,0 +1,24 @@
+{
+  "projectName": "babel-preset-common",
+  "projectOwner": "billgo",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "eslint",
+  "contributors": [
+    {
+      "login": "billgo",
+      "name": "Hi.Billgo",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5780482?v=4",
+      "profile": "https://software.edu.gr",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
