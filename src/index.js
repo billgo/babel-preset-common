@@ -2,12 +2,13 @@ module.exports = function(context, opts = {}) {
   const nodeEnv = process.env.NODE_ENV;
   const {
     loose = false,
-    useBuiltIns = false,
+    useBuiltIns = 'usage',
     modules = 'auto',
     targets = {
       browsers: ['last 2 versions'],
       node: 'current',
     },
+    corejs = 3,
     env = {},
   } = opts;
   const transformRuntime = 'transformRuntime' in opts ? opts.transformRuntime : {};
@@ -62,6 +63,7 @@ module.exports = function(context, opts = {}) {
           targets,
           modules,
           exclude,
+          corejs,
           ...env,
         },
       ],
