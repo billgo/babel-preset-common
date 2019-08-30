@@ -1,11 +1,15 @@
 {
   "name": "babel-preset-common",
-  "npmName": "BabelPresetCommon",
   "version": "0.4.0",
   "author": "Billgo",
   "license": "MIT",
   "description": "A preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms are needed by your target environment(s).",
   "homepage": "https://github.com/billgo/babel-preset-common",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billgo/babel-preset-common.git"
+  },
+  "bugs": "https://github.com/billgo/babel-preset-common/issues",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib"
@@ -14,8 +18,8 @@
     "lib"
   ],
   "scripts": {
-    "prepare": "npm run lint && npm run compile",
-    "compile": "rimraf lib && mkdir lib && babel src --out-dir lib",
+    "prepare": "npm run lint && npm run build",
+    "build": "rimraf lib && mkdir lib && babel src --out-dir lib",
     "lint": "prettier-eslint --write src/**/*.{js,jsx}"
   },
   "dependencies": {
@@ -46,7 +50,7 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.2",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "eslint": "^6.2.2",
     "eslint-config-prettier": "^6.1.0",
@@ -58,7 +62,7 @@
     "rimraf": "^3.0.0"
   },
   "optionalDependencies": {
-    "webpack": "^4.39.2"
+    "webpack": "^4.39.3"
   },
   "babel": {
     "presets": [
@@ -109,10 +113,5 @@
   ],
   "publishConfig": {
     "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/billgo/babel-preset-common.git"
-  },
-  "bugs": "https://github.com/billgo/babel-preset-common/issues"
+  }
 }
