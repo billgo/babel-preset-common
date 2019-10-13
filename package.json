@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-common",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Billgo",
   "license": "MIT",
   "description": "A preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms are needed by your target environment(s).",
@@ -23,8 +23,8 @@
     "lint": "prettier-eslint --write src/**/*.{js,jsx}"
   },
   "dependencies": {
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
     "@babel/plugin-proposal-async-generator-functions": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-decorators": "^7.6.0",
@@ -33,36 +33,36 @@
     "@babel/plugin-proposal-export-namespace-from": "^7.5.2",
     "@babel/plugin-proposal-function-bind": "^7.2.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.4.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
     "@babel/plugin-proposal-optional-catch-binding": "^7.2.0",
     "@babel/plugin-proposal-optional-chaining": "^7.6.0",
     "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
-    "@babel/plugin-transform-react-constant-elements": "^7.6.0",
+    "@babel/plugin-transform-react-constant-elements": "^7.6.3",
     "@babel/plugin-transform-react-inline-elements": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
     "@babel/preset-flow": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/runtime": "^7.6.0",
+    "@babel/preset-react": "^7.6.3",
+    "@babel/runtime": "^7.6.3",
     "babel-plugin-react-require": "^3.1.1",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
-    "eslint": "^6.3.0",
-    "eslint-config-prettier": "^6.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "prettier": "^1.18.2",
     "prettier-eslint": "^9.0.0",
     "prettier-eslint-cli": "^5.0.0",
     "rimraf": "^3.0.0"
   },
   "optionalDependencies": {
-    "webpack": "^4.39.3"
+    "webpack": "^4.41.1"
   },
   "babel": {
     "presets": [
